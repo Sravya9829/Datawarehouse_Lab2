@@ -1,0 +1,19 @@
+Create DATABASE dev;
+create Schema RAW_DATA;
+
+// NPS table creation
+CREATE OR REPLACE TABLE RAW_DATA.NPS (
+    date DATE,
+    open FLOAT,
+    high FLOAT,
+    low FLOAT,
+    close FLOAT,
+    volume INTEGER,
+    symbol VARCHAR(10)
+);
+
+//view the data
+SELECT * from dev.RAW_DATA.NPS;
+
+//view data in dbt stage
+SELECT * from dev.ANALYSIS_ANALYSIS.MOVING_AVERAGE;
