@@ -1,0 +1,56 @@
+# schema.yml
+
+version: 2
+
+models:
+  - name: stg_nps
+    description: "Staging model for NPS data"
+    meta:
+      schema: STAGING
+    columns:
+      - name: DATE
+        description: "The date of the stock price record."
+        data_tests:
+          - not_null
+      - name: OPEN
+        description: "Opening stock price."
+        data_tests:
+          - not_null
+      - name: HIGH
+        description: "Highest stock price during the trading day."
+        data_tests:
+          - not_null
+      - name: LOW
+        description: "Lowest stock price during the trading day."
+        data_tests:
+          - not_null
+      - name: CLOSE
+        description: "Closing stock price."
+        data_tests:
+          - not_null
+      - name: VOLUME
+        description: "Volume of stocks traded."
+        data_tests:
+          - not_null
+      - name: SYMBOL
+        description: "Stock symbol."
+        data_tests:
+          - not_null
+
+  - name: moving_average
+    description: "Analysis model that calculates the 7-day moving average of the closing prices."
+    meta:
+      schema: ANALYSIS
+    columns:
+      - name: DATE
+        description: "The date for which the moving average is calculated."
+        data_tests:
+          - not_null
+      - name: SYMBOL
+        description: "The stock symbol."
+        data_tests:
+          - not_null
+      - name: moving_avg_7d
+        description: "7-day moving average of the closing prices."
+        data_tests:
+          - not_null
