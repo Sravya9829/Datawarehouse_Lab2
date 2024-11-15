@@ -109,7 +109,6 @@ The goal of this project is to automate the execution of dbt jobs using Airflow 
 - **dbt_dag.py**: The Airflow DAG file that defines and schedules the dbt jobs.
 - **docker-compose.yml**: Docker Compose file to set up and configure the Airflow environment with dbt.
 - **dbt/**: The dbt project folder containing models, configurations, and `profiles.yml` for Snowflake.
-- **superset_dashboards/**: (Optional) Folder to store JSON exports of Superset dashboards for version control.
 
 ## Troubleshooting
 
