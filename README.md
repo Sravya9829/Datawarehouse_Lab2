@@ -122,9 +122,3 @@ Potential improvements include:
 - Automating data refreshes in Superset to reflect real-time updates from dbt.
 - Expanding the pipeline to include data ingestion from other sources.
 - Using `DbtCloudRunJobOperator` to manage dbt jobs through dbt Cloud for simplified configuration.
-
-## Contact Information
-For further assistance, please contact:
-- [satya@example.com](mailto:satya@example.com)
-- [prerana@example.com](mailto:prerana@example.com)
-- [chandana@example.com](mailto:chandana@example.com)
